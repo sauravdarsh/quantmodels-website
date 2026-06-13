@@ -24,8 +24,14 @@ export function HeroSection({ compact = false }: HeroSectionProps) {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              href="/models"
+              href="/models/heston"
               className="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+            >
+              Launch Heston Model
+            </Link>
+            <Link
+              href="/models"
+              className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/5"
             >
               Explore Models
             </Link>

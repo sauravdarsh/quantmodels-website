@@ -7,7 +7,7 @@ import { PageHero } from "@/components/page-hero";
 export const metadata: Metadata = {
   title: "Models",
   description:
-    "Explore Heston, Black-Scholes, and risk analytics modules available in QuantModels.ai.",
+    "Explore Heston stochastic volatility, Black-Scholes, Monte Carlo pricing, CIR++, and risk analytics modules available in QuantModels.ai.",
 };
 
 export default function ModelsPage() {
@@ -15,8 +15,8 @@ export default function ModelsPage() {
     <>
       <PageHero
         eyebrow="Models"
-        title="Three core engines for pricing and institutional oversight"
-        description="Our model layer supports derivatives pricing, volatility calibration, and portfolio monitoring with outputs designed for practitioners."
+        title="Five core engines for pricing and institutional oversight"
+        description="Our model layer supports Heston stochastic volatility, Black-Scholes pricing, Monte Carlo valuation, CIR++ interest-rate modeling, and portfolio risk monitoring with outputs designed for practitioners."
       />
       <ModelsSection showHeader={false} />
       <AboutSection />

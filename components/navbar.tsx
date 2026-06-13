@@ -5,6 +5,7 @@ const navigation = [
   { href: "/pricing", label: "Pricing" },
   { href: "/pricing-library", label: "Pricing Library" },
   { href: "/models", label: "Models" },
+  { href: "/models/portfolio-management", label: "Portfolio Management" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -37,6 +38,12 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/models/heston"
+              className="shrink-0 rounded-full bg-cyan-300 px-4 py-2 font-medium text-slate-950 transition hover:bg-cyan-200"
+            >
+              Launch App
+            </Link>
             <Link
               href="/contact"
               className="shrink-0 rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-2 font-medium text-cyan-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/15"

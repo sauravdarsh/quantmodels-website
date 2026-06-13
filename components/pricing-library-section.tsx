@@ -43,7 +43,8 @@ export function PricingLibrarySection({
                 The Pricing Library pairs a Python-first API with institutional
                 modeling workflows, making it easier to move from market inputs
                 to calibrated models, simulated paths, option prices, and risk
-                diagnostics without fragmenting the stack.
+                diagnostics without fragmenting the stack. Heston and CIR++
+                simulation now run internally inside QuantModels.ai.
               </p>
             </div>
 
@@ -109,9 +110,7 @@ export function PricingLibrarySection({
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://hestonmodel2.streamlit.app/"
-                target="_blank"
-                rel="noreferrer"
+                href="/models/heston"
                 className="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
               >
                 Launch Heston Simulator

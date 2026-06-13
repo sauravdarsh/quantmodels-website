@@ -6,17 +6,19 @@ export const stats = [
 
 export const models = [
   {
-    name: "Heston Model",
+    name: "Heston Stochastic Volatility",
+    href: "/models/heston",
     summary:
       "Calibrate stochastic volatility surfaces with a workflow designed for institutional derivatives desks.",
     bullets: [
       "Fast parameter estimation for liquid and bespoke structures",
       "Scenario testing across volatility smiles and forward curves",
-      "Audit-friendly reports for model governance teams",
+      "Internal Monte Carlo simulation directly inside QuantModels.ai",
     ],
   },
   {
     name: "Black-Scholes",
+    href: "/models/black-scholes",
     summary:
       "Reliable vanilla pricing, Greeks, and hedging analytics packaged in a clean execution layer.",
     bullets: [
@@ -26,13 +28,47 @@ export const models = [
     ],
   },
   {
+    name: "Monte Carlo Pricing",
+    href: "/models/monte-carlo",
+    summary:
+      "Pathwise pricing and simulation infrastructure for scenario-driven valuation across structured products and exotics.",
+    bullets: [
+      "Stochastic path generation across configurable horizons",
+      "Flexible payoff modeling for simulation-based pricing",
+      "Stress-ready outputs for downstream portfolio analysis",
+    ],
+  },
+  {
+    name: "Portfolio Management",
+    href: "/models/portfolio-management",
+    summary:
+      "Construct and optimise NIFTY equity portfolios with mock allocations, diversification analytics, and institutional-style reporting.",
+    bullets: [
+      "Coverage across NIFTY 50, Next 50, NIFTY 100, and sector universes",
+      "Simple portfolio return, volatility, Sharpe ratio, and drawdown analytics",
+      "Placeholder workflows for efficient frontier, allocation, and risk contribution views",
+    ],
+  },
+  {
     name: "Risk Analytics",
+    href: "/models",
     summary:
       "Centralize exposure, stress, and liquidity diagnostics for portfolio managers and risk officers.",
     bullets: [
       "Portfolio VaR and stress-testing views",
       "Factor decomposition and concentration monitoring",
       "Committee-ready dashboards for oversight teams",
+    ],
+  },
+  {
+    name: "CIR++ Interest Rate Model",
+    href: "/models/cir-plus-plus",
+    summary:
+      "A shifted short-rate framework for interest-rate simulation and curve-consistent fixed-income pricing workflows.",
+    bullets: [
+      "Extends Cox-Ingersoll-Ross with a deterministic shift to fit the initial yield curve",
+      "Supports zero-coupon bond pricing and interest-rate derivative analytics",
+      "Useful for scenario generation, calibration, and term-structure aware simulation",
     ],
   },
 ];
@@ -125,4 +161,19 @@ export const pricingLibraryWorkflow = [
   "Simulation",
   "Pricing",
   "Risk Metrics",
+];
+
+export const productArchitecture = [
+  {
+    domain: "quantmodels.ai",
+    label: "Professional SaaS website",
+    summary:
+      "The main institutional interface for product discovery, simulator access, pricing workflows, and client engagement.",
+  },
+  {
+    domain: "Internal simulators",
+    label: "Integrated quant pricing engine",
+    summary:
+      "Heston, CIR++, Black-Scholes, and Monte Carlo simulation tools now run directly inside the QuantModels.ai product experience.",
+  },
 ];
