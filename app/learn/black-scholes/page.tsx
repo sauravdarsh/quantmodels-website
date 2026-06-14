@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { LearningLessonPage } from "@/components/learning-lesson-page";
+import { staticQuestionBank } from "@/lib/learning";
 
 export const metadata: Metadata = {
   title: "Learn Black-Scholes",
@@ -8,43 +9,10 @@ export const metadata: Metadata = {
     "Study Black-Scholes intuition, formula structure, practical use cases, and quiz-based learning inside QuantModels.ai.",
 };
 
-const quizQuestions = [
-  {
-    prompt: "What is the primary market setting assumed by the Black-Scholes model?",
-    options: [
-      "A European-style option on an underlying with lognormal price dynamics",
-      "A bond portfolio with default intensity",
-      "A stochastic volatility model with random jumps",
-      "A multi-asset basket with discrete rebalancing costs",
-    ],
-    answer: 0,
-    explanation:
-      "Black-Scholes is built around European-style exercise and a lognormal diffusion for the underlying, which makes closed-form pricing possible.",
-  },
-  {
-    prompt: "Which input tends to increase both call and put option value in Black-Scholes?",
-    options: ["Dividend yield", "Volatility", "Lower maturity", "Lower strike"],
-    answer: 1,
-    explanation:
-      "Higher volatility increases the dispersion of terminal outcomes, which generally increases the value of optionality for both calls and puts.",
-  },
-  {
-    prompt: "Why is Black-Scholes still used heavily in practice?",
-    options: [
-      "It perfectly explains every volatility smile",
-      "It provides a fast benchmark for pricing and Greeks",
-      "It removes all hedging error",
-      "It only works for American options",
-    ],
-    answer: 1,
-    explanation:
-      "Even when traders use richer models, Black-Scholes remains a fast reference point for vanilla pricing, sensitivities, and implied volatility communication.",
-  },
-];
-
 export default function LearnBlackScholesPage() {
   return (
     <LearningLessonPage
+      topic="black-scholes"
       eyebrow="Quant Learning Lab"
       title="Black-Scholes Essentials"
       description="Build intuition for the classic option-pricing model that still anchors much of modern derivatives language."
@@ -56,7 +24,7 @@ export default function LearnBlackScholesPage() {
         "d2 = d1 - sigma sqrt(T)",
       ]}
       practicalUseCase="A derivatives desk can use Black-Scholes to quote a vanilla European option, compute delta and vega quickly, and compare market prices to implied volatility benchmarks before moving to more advanced calibration models."
-      quizQuestions={quizQuestions}
+      quizQuestions={staticQuestionBank["black-scholes"]}
       ctaHref="/models/black-scholes"
       ctaLabel="Try the model"
     />

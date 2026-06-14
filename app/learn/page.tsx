@@ -6,7 +6,7 @@ import { PageHero } from "@/components/page-hero";
 export const metadata: Metadata = {
   title: "Quant Learning Lab",
   description:
-    "Study core quantitative finance models, intuition, formulas, and practical use cases inside the QuantModels.ai Learning Lab.",
+    "Study core quantitative finance models, intuition, formulas, practical use cases, and unlimited mock AI-generated questions inside the QuantModels.ai Learning Lab.",
 };
 
 const lessons = [
@@ -40,6 +40,12 @@ const lessons = [
     summary:
       "Learn how return, volatility, correlation, and allocation methods fit together in portfolio construction.",
   },
+  {
+    href: "/learn/var-expected-shortfall",
+    title: "VaR and Expected Shortfall",
+    summary:
+      "Study downside risk thresholds, tail-loss intuition, and the institutional logic behind modern risk reporting.",
+  },
 ];
 
 export default function LearnPage() {
@@ -56,10 +62,10 @@ export default function LearnPage() {
           <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-8">
             <p className="text-sm tracking-[0.22em] text-slate-500 uppercase">Learning Mission</p>
             <p className="mt-4 max-w-4xl text-sm leading-8 text-slate-300">
-              The Quant Learning Lab turns model pages into guided educational surfaces. Each lesson
-              combines conceptual framing, formula awareness, practical buy-side context, and an
-              interactive quiz so users can move from intuition to application without leaving the
-              product experience.
+              The Quant Learning Lab turns model pages into guided educational surfaces. Each
+              lesson combines conceptual framing, formula awareness, practical buy-side context, a
+              deep static question bank, and a future-ready AI generation workflow so users can move
+              from intuition to application without leaving the product experience.
             </p>
           </div>
 

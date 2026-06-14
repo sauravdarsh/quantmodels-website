@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+import { type LearningTopic } from "@/lib/learning";
+
+import { LearningQuestionGenerator } from "@/components/learning-question-generator";
 import { PageHero } from "@/components/page-hero";
 
 import { LearningQuiz, type QuizQuestion } from "./learning-quiz";
@@ -14,6 +17,7 @@ type LearningLessonPageProps = {
   overview: string;
   practicalUseCase: string;
   quizQuestions: QuizQuestion[];
+  topic: LearningTopic;
   title: string;
 };
 
@@ -27,6 +31,7 @@ export function LearningLessonPage({
   overview,
   practicalUseCase,
   quizQuestions,
+  topic,
   title,
 }: LearningLessonPageProps) {
   return (
@@ -79,7 +84,15 @@ export function LearningLessonPage({
           </div>
 
           <div className="mt-8">
-            <LearningQuiz questions={quizQuestions} />
+            <LearningQuiz
+              questions={quizQuestions}
+              title="Static Question Bank"
+              description="Work through the curated model question bank first, then generate additional mock AI question sets below."
+            />
+          </div>
+
+          <div className="mt-8">
+            <LearningQuestionGenerator defaultTopic={topic} />
           </div>
 
           <div className="mt-12 flex flex-wrap gap-4">

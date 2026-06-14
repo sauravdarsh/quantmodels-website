@@ -10,10 +10,16 @@ export type QuizQuestion = {
 };
 
 type LearningQuizProps = {
+  description?: string;
   questions: QuizQuestion[];
+  title?: string;
 };
 
-export function LearningQuiz({ questions }: LearningQuizProps) {
+export function LearningQuiz({
+  description,
+  questions,
+  title = "Interactive Quiz",
+}: LearningQuizProps) {
   const [revealedAnswers, setRevealedAnswers] = useState<Record<number, boolean>>({});
 
   function toggleAnswer(index: number) {
@@ -25,7 +31,10 @@ export function LearningQuiz({ questions }: LearningQuizProps) {
 
   return (
     <div className="rounded-[1.75rem] border border-cyan-300/20 bg-slate-950/90 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.3)]">
-      <p className="text-sm tracking-[0.22em] text-slate-500 uppercase">Interactive Quiz</p>
+      <p className="text-sm tracking-[0.22em] text-slate-500 uppercase">{title}</p>
+      {description ? (
+        <p className="mt-3 max-w-3xl text-sm leading-8 text-slate-300">{description}</p>
+      ) : null}
       <div className="mt-6 grid gap-5">
         {questions.map((question, index) => {
           const isRevealed = Boolean(revealedAnswers[index]);
