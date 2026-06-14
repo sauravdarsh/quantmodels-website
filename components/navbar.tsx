@@ -5,6 +5,7 @@ const navigation = [
   { href: "/pricing", label: "Pricing" },
   { href: "/pricing-library", label: "Pricing Library" },
   { href: "/models", label: "Models" },
+  { href: "/learn", label: "Learning Lab" },
   { href: "/models/portfolio-management", label: "Portfolio Management" },
   { href: "/contact", label: "Contact" },
 ];
